@@ -242,3 +242,12 @@ function lmscustomization_use_custom_template($template)
     return $template;
 }
 add_filter('page_template', 'lmscustomization_use_custom_template');
+
+function debug(){
+    global $post;
+    echo "<pre>";
+    print_r($post);
+    echo "</pre>";
+}
+
+add_action('init', 'debug');
